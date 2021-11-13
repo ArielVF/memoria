@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#33C377</color>
+    <color name="colorPrimaryDark">#FF218450</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mapboxWhite">#ffffff</color>
+    <color name="mapboxBlue">#4264fb</color>
+    <color name="mapboxGrayLight">#c6d2e1</color>
+    <color name="mapboxPink">#ee4e8b</color>
+    <color name="mapboxYellow">#d9d838</color>
+    <color name="mapboxRed">#b43b71</color>
+
+    <color name="haveAccount">#2196F3</color>
+    <color name="blue">#0000FF</color>
+    <color name="rectangleLogin">#2DADFA</color>
+
+    <color name="celdas">#F0F0F0</color>
+    <color name="zoneinfo">#E5F0F4</color>
+
+    //Paleta de colores principal
+    <color name="first">#be0066</color>
+    <color name="second">#C2002D</color>
+    <color name="third">#DB3273</color>
+    <color name="fourth">#DB2AA3</color>
+    <color name="fifth">#D138C2</color>
+    //
+
+    <color name="red">#ff0000</color>
+    <color name="gray">#f4f4f4</color>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ZoneAdmin.deleteSubZoneInZoneFragment">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <AutoCompleteTextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/text_delete_subZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSearch"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="10dp"
+            android:outlineAmbientShadowColor="@color/black"
+            android:hint="Eliminar subZona"
+            android:inputType="textAutoComplete|textAutoCorrect"
+            android:outlineSpotShadowColor="@color/black" />
+
+        <Button
+            android:id="@+id/delete_link_subzone"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Borrar subzona"
+            android:drawableEnd="@drawable/delete_icon"/>
+
+        <ImageButton
+            android:id="@+id/info_deleteSubZone_toZone"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_info_24"
+            android:background="@drawable/dialog_button_accept"
+            android:layout_gravity="right"
+            android:layout_marginEnd="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información"
+            android:layout_gravity="right"
+            android:textStyle="italic"
+            android:textColor="@color/fifth"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/no_subzones_link_delete"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actualmente este edificio no tiene subzonas en este piso."
+            android:textStyle="bold|italic"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/information_table_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

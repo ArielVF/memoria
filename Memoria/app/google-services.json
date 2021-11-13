@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381312203005",
+    "project_id": "tesis-38b4f",
+    "storage_bucket": "tesis-38b4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381312203005:android:b780e87e1c456a49672694",
+        "android_client_info": {
+          "package_name": "com.example.tesis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381312203005-m7k7niq8d0ivrdf03e11je2e75ss293j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp8l3VNhSHaxDZo7WmaGw6eSqZzyltDJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381312203005-m7k7niq8d0ivrdf03e11je2e75ss293j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

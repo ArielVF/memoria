@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GuestSesion.InfoZone">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:auto_cycle="true"
+                android:background="@drawable/mark_for_image"
+                android:padding="5dp"
+                app:corner_radius="25"
+                app:delay="0"
+                app:error_image="@color/white"
+                app:period="3000"
+                app:placeholder="@color/black" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/image_zone_no_exist"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@mipmap/no_image_avaible"
+                android:background="@drawable/mark_for_image"
+                android:padding="3dp"/>
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Título"
+                android:textColor="@color/black"
+                android:id="@+id/title_zone"
+                android:textStyle="bold"
+                android:textSize="25dp"/>
+
+            <com.codesgood.views.JustifiedTextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:id="@+id/description_zone"
+                android:text="Aquí va la descripción del edificio que se está visualizando"
+                android:textSize="18dp"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/text_build_content"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Contenido del Edificio"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:id="@+id/layout_tables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:layout_margin="15dp"
+                android:id="@+id/back_map"
+                android:layout_gravity="right"
+                android:paddingBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_back"
+                android:text="Volver" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

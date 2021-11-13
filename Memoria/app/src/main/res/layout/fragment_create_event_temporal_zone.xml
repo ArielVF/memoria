@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreateEventTemporalZone">
+
+            <LinearLayout
+                android:id="@+id/layout_one"
+               android:layout_margin="10dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <Button
+                   android:id="@+id/next_step"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:drawableEnd="@drawable/continue_icon"
+                   android:text="Continuar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione la ubicación del evento o busque una especifica usando el buscador."
+                    android:textStyle="italic"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"/>
+
+               <com.mapbox.mapboxsdk.maps.MapView
+                   android:id="@+id/mapView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   mapbox:mapbox_cameraTargetLat="-35.0028"
+                   mapbox:mapbox_cameraTargetLng="-71.2297"
+                   mapbox:mapbox_cameraZoom="8"
+                   tools:layout_editor_absoluteX="0dp"
+                   tools:layout_editor_absoluteY="16dp">
+
+                   <com.google.android.material.floatingactionbutton.FloatingActionButton
+                       android:id="@+id/fab_location_search"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="end|bottom"
+                       android:backgroundTint="@color/first"
+                       app:tint="@color/white"
+                       android:layout_margin="16dp"
+                       android:tint="@android:color/white"
+                       app:backgroundTint="@color/colorPrimary"
+                       app:srcCompat="@android:drawable/ic_search_category_default" />
+               </com.mapbox.mapboxsdk.maps.MapView>
+           </LinearLayout>
+
+       <LinearLayout
+           android:visibility="gone"
+           android:id="@+id/layout_second"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ScrollView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <LinearLayout
+                   android:layout_margin="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+
+                   <Button
+                       android:id="@+id/back_step"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:drawableEnd="@drawable/back_icon"
+                       android:text="Volver"/>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_marginTop="15dp"
+                       android:id="@+id/layout_name_zone"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="Nombre Zona"
+                       app:errorEnabled="true"
+                       app:helperTextTextColor="@color/black"
+                       app:boxStrokeColor="@color/black"
+                       app:errorIconDrawable="@drawable/ic_error"
+                       app:boxBackgroundMode="outline"
+                       app:helperText="Indique nombre del sector"
+                       app:counterEnabled="true"
+                       app:counterMaxLength="100"
+                       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/newzone_name_t"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:inputType="text"
+                           android:maxLength="100"
+                           android:maxLines="1"/>
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_marginTop="15dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/layout_name_t"
+                       android:hint="Titulo evento"
+                       app:errorEnabled="true"
+                       app:helperTextTextColor="@color/black"
+                       app:boxStrokeColor="@color/black"
+                       app:errorIconDrawable="@drawable/ic_error"
+                       app:boxBackgroundMode="outline"
+                       app:helperText="Título del evento"
+                       app:counterEnabled="true"
+                       app:counterMaxLength="42"
+                       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/event_title_t"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:inputType="text"
+                           android:maxLength="42"
+                           android:maxLines="1"/>
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_marginTop="15dp"
+                       android:id="@+id/layout_description"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="Descripción"
+                       app:errorEnabled="true"
+                       app:errorIconDrawable="@drawable/ic_error"
+                       app:helperTextTextColor="@color/black"
+                       app:boxStrokeColor="@color/black"
+                       app:boxBackgroundMode="outline"
+                       app:helperText="Describa el evento"
+                       app:counterEnabled="true"
+                       app:counterMaxLength="500"
+                       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/event_description_t"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="top"
+                           android:inputType="textMultiLine"
+                           android:lines="5"
+                           android:maxLength="500"
+                           android:overScrollMode="always"
+                           android:scrollbarStyle="insideInset"
+                           android:scrollbars="vertical"
+                           android:scrollHorizontally="false" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <LinearLayout
+                       android:layout_marginTop="20dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="vertical">
+
+                       <ImageView
+                           android:id="@+id/image_event_t"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:src="@mipmap/no_image_avaible"/>
+
+                       <Button
+                           android:layout_marginTop="5dp"
+                           android:id="@+id/add_image_button_t"
+                           android:layout_gravity="center"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Agregar Foto"
+                           android:drawableRight="@drawable/gallery_image"/>
+
+                       <Button
+                           android:visibility="gone"
+                           android:layout_marginTop="5dp"
+                           android:id="@+id/delete_image_button_t"
+                           android:layout_gravity="center"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Borrar Foto Actual"
+                           android:drawableRight="@drawable/delete_icon"/>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginTop="15dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/layout_start"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginEnd="5dp"
+                           android:hint="Fecha Inicio"
+                           android:layout_weight="1"
+                           app:errorEnabled="true"
+                           app:errorIconDrawable="@drawable/ic_error"
+                           app:boxBackgroundMode="outline"
+                           app:helperText="Fecha inicio del evento"
+                           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:id="@+id/event_start_t"
+                               android:layout_weight="1"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"/>
+                       </com.google.android.material.textfield.TextInputLayout>
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/layout_hour"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Hora Inicio"
+                           android:layout_weight="1"
+                           app:helperTextTextColor="@color/black"
+                           app:errorEnabled="true"
+                           app:errorIconDrawable="@drawable/ic_error"
+                           app:boxStrokeColor="@color/black"
+                           android:layout_marginStart="5dp"
+                           app:boxBackgroundMode="outline"
+                           app:helperText="hora inicio"
+                           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:id="@+id/evet_hourstart_t"
+                               android:layout_weight="1"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content" />
+                       </com.google.android.material.textfield.TextInputLayout>
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_marginTop="15dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/layout_finish"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Fecha Termino"
+                           android:layout_weight="1"
+                           app:helperTextTextColor="@color/black"
+                           app:boxStrokeColor="@color/black"
+                           app:errorEnabled="true"
+                           app:errorIconDrawable="@drawable/ic_error"
+                           android:layout_marginEnd="5dp"
+                           app:boxBackgroundMode="outline"
+                           app:helperText="Fecha cierre del evento"
+                           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:id="@+id/event_finish_t"
+                               android:layout_width="match_parent"
+                               android:layout_weight="1"
+                               android:layout_height="wrap_content" />
+
+                       </com.google.android.material.textfield.TextInputLayout>
+
+                       <com.google.android.material.textfield.TextInputLayout
+                           android:id="@+id/layout_hourfinish"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Hora Termino"
+                           android:layout_weight="1"
+                           app:helperTextTextColor="@color/black"
+                           app:boxStrokeColor="@color/black"
+                           app:errorEnabled="true"
+                           app:errorIconDrawable="@drawable/ic_error"
+                           android:layout_marginStart="5dp"
+                           app:boxBackgroundMode="outline"
+                           app:helperText="Hora termino"
+                           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                           <com.google.android.material.textfield.TextInputEditText
+                               android:id="@+id/event_hourfinish_t"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"/>
+                       </com.google.android.material.textfield.TextInputLayout>
+                   </LinearLayout>
+
+                   <Button
+                       android:id="@+id/createevent_t"
+                       android:layout_gravity="center"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:drawableEnd="@drawable/edit_event"
+                       android:layout_marginTop="24dp"
+                       android:text="Crear Evento"
+                       android:layout_marginBottom="15dp"/>
+               </LinearLayout>
+           </ScrollView>
+       </LinearLayout>
+
+</FrameLayout>

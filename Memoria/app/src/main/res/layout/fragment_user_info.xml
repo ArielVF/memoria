@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userControl.UserInfoFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:src="@mipmap/user"
+                            app:civ_border_color="@color/mapboxRed" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_info_name"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Nombre"
+                            app:boxBackgroundMode="outline"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="42"
+                            app:errorEnabled="true"
+                            app:errorIconDrawable="@drawable/ic_error"
+                            app:helperText="Editar nombre">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/info_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="42"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_info_lastname"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Apellido"
+                            app:boxBackgroundMode="outline"
+                            app:counterEnabled="true"
+                            app:counterMaxLength="60"
+                            app:errorEnabled="true"
+                            app:errorIconDrawable="@drawable/ic_error"
+                            app:helperText="Editar Apellido">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/info_lastname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLength="60"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_info_email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Correo electrónico"
+                            app:boxBackgroundMode="outline"
+                            app:helperText="campo no editable">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/info_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="50"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_info_rut"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Rut"
+                            app:boxBackgroundMode="outline"
+                            app:helperText="Campo no editable">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/info_rut"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:maxLength="42"
+                                    android:maxLines="1" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_info_role"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Rol"
+                            app:boxBackgroundMode="outline"
+                            app:errorIconDrawable="@drawable/ic_error"
+                            app:helperText="Editar rol">
+
+                                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                                    android:id="@+id/info_role"
+                                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="55dp"
+                                    android:clickable="true"
+                                    android:drawableEnd="@android:drawable/arrow_down_float"
+                                    android:hint="Rol"
+                                    android:inputType="none"
+                                    android:padding="15dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/edit_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/colorPrimary"
+                                    android:textColor="@color/white"
+                                    android:drawableRight="@drawable/edit_icon"
+                                    android:paddingRight="10dp"
+                                    android:text="Editar"
+                                    android:textStyle="bold" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/delete_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/first"
+                                    android:drawableRight="@drawable/delete_icon"
+                                    android:paddingRight="10dp"
+                                    android:text="Deshabilitar"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/active_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/haveAccount"
+                                    android:drawableRight="@drawable/enable_icon"
+                                    android:paddingRight="10dp"
+                                    android:text="Habilitar"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+                </LinearLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/user_control_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/userControl"
+            android:icon="@drawable/ic_baseline_admin"
+            android:title="Gestionar usuarios"
+            android:visible="false"/>
+    </group>
+
+    <group android:id="@+id/perfil_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+    </group>
+
+    <group android:id="@+id/map_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+    </group>
+
+    <group android:id="@+id/zones_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/zoneFragment"
+            android:icon="@drawable/location_icon"
+            android:title="Zonas"
+            android:visible="false"/>
+
+        <item android:id="@+id/subZoneFragment"
+            android:icon="@drawable/subzone_icon"
+            android:title="SubZonas"
+            android:visible="false"/>
+    </group>
+
+    <group android:id="@+id/events_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/selectTypeEvent"
+            android:icon="@drawable/ic_menu_createevent"
+            android:title="Crear Evento"
+            android:visible="false"/>
+        <item
+            android:id="@+id/allEventsFragment"
+            android:icon="@drawable/edit_event"
+            android:title="Todos los eventos"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/myEvents"
+            android:icon="@drawable/edit_event"
+            android:title="Mis eventos"
+            android:visible="false"/>
+    </group>
+</menu>

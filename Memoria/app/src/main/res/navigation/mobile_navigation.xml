@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.tesis.ui.map.MapFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_infoZoneFragment"
+            app:destination="@id/infoZoneFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.tesis.ui.event.EventFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_infoEventFragment"
+            app:destination="@id/infoEventFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.tesis.ui.perfil.ProfileFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/createEventeFragment"
+        android:name="com.example.tesis.ui.createEvent.CreateEventFragment"
+        android:label="Crear Evento"
+        tools:layout="@layout/fragment_create_event" />
+
+    <fragment
+        android:id="@+id/userControl"
+        android:name="com.example.tesis.ui.userControl.UserControlFragment"
+        android:label="Gestión de Usuarios"
+        tools:layout="@layout/fragment_user_control" >
+        <action
+            android:id="@+id/action_userControl_to_userInfoFragment"
+            app:destination="@id/userInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myEvents"
+        android:name="com.example.tesis.ui.myEvents.MyEventFragment"
+        android:label="Mis Eventos"
+        tools:layout="@layout/fragment_my_events" >
+        <action
+            android:id="@+id/action_myEvents_to_myEventInfoFragment"
+            app:destination="@id/myEventInfoFragment" />
+        <action
+            android:id="@+id/action_myEvents_to_editMyEventZoneTemporal"
+            app:destination="@id/editMyEventZoneTemporal" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userInfoFragment"
+        android:name="com.example.tesis.ui.userControl.UserInfoFragment"
+        android:label="Información de usuario"
+        tools:layout="@layout/fragment_user_info" />
+    <fragment
+        android:id="@+id/infoEventFragment"
+        android:name="com.example.tesis.ui.event.InfoEventFragment"
+        android:label="Información de evento"
+        tools:layout="@layout/fragment_info_event" />
+    <fragment
+        android:id="@+id/myEventInfoFragment"
+        android:name="com.example.tesis.ui.myEvents.MyEventInfoFragment"
+        android:label="Información de mi evento"
+        tools:layout="@layout/fragment_my_event_info" />
+    <fragment
+        android:id="@+id/infoZoneFragment"
+        android:name="com.example.tesis.ui.map.infoZoneFragment"
+        android:label="Información de zona"
+        tools:layout="@layout/fragment_info_zone" />
+    <fragment
+        android:id="@+id/zoneFragment"
+        android:name="com.example.tesis.ui.ZoneAdmin.ZoneFragment"
+        android:label="Zonas"
+        tools:layout="@layout/fragment_zone" >
+        <action
+            android:id="@+id/action_zoneFragment_to_createZoneFragment"
+            app:destination="@id/createZoneFragment" />
+        <action
+            android:id="@+id/action_zoneFragment_to_editZoneFragment"
+            app:destination="@id/editZoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createZoneFragment"
+        android:name="com.example.tesis.ui.ZoneAdmin.createZoneFragment"
+        android:label="Crear nueva zona"
+        tools:layout="@layout/fragment_create_zone" />
+    <fragment
+        android:id="@+id/editZoneFragment"
+        android:name="com.example.tesis.ui.ZoneAdmin.editZoneFragment"
+        android:label="Editar zona"
+        tools:layout="@layout/fragment_edit_zone" >
+        <action
+            android:id="@+id/action_editZoneFragment_to_addSubZoneToZoneFgrament"
+            app:destination="@id/addSubZoneToZoneFgrament" />
+        <action
+            android:id="@+id/action_editZoneFragment_to_deleteSubZoneInZoneFragment"
+            app:destination="@id/deleteSubZoneInZoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSubZoneToZoneFgrament"
+        android:name="com.example.tesis.ui.ZoneAdmin.addSubZoneToZoneFgrament"
+        android:label="Agregar subzona"
+        tools:layout="@layout/fragment_add_sub_zone_to_zone_fgrament" />
+    <fragment
+        android:id="@+id/subZoneFragment"
+        android:name="com.example.tesis.ui.subZoneAdmin.SubZoneFragment"
+        android:label="Subzonas"
+        tools:layout="@layout/fragment_sub_zone" >
+        <action
+            android:id="@+id/action_subZoneFragment_to_createSubZoneFragment"
+            app:destination="@id/createSubZoneFragment" />
+        <action
+            android:id="@+id/action_subZoneFragment_to_editSubZoneFragment"
+            app:destination="@id/editSubZoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createSubZoneFragment"
+        android:name="com.example.tesis.ui.subZoneAdmin.createSubZoneFragment"
+        android:label="Crear subzona"
+        tools:layout="@layout/fragment_create_sub_zone" />
+    <fragment
+        android:id="@+id/editSubZoneFragment"
+        android:name="com.example.tesis.ui.subZoneAdmin.editSubZoneFragment"
+        android:label="Editar subzona"
+        tools:layout="@layout/fragment_edit_sub_zone" />
+    <fragment
+        android:id="@+id/deleteSubZoneInZoneFragment"
+        android:name="com.example.tesis.ui.ZoneAdmin.deleteSubZoneInZoneFragment"
+        android:label="Borrar subzona"
+        tools:layout="@layout/fragment_delete_sub_zone_in_zone" />
+
+    <fragment
+        android:id="@+id/selectTypeEvent"
+        android:name="com.example.tesis.SelectTypeEvent"
+        android:label="Seleccionar tipo de evento"
+        tools:layout="@layout/fragment_select_type_event" >
+        <action
+            android:id="@+id/action_selectTypeEvent_to_createEventeFragment"
+            app:destination="@id/createEventeFragment" />
+        <action
+            android:id="@+id/action_selectTypeEvent_to_createEventTemporalZone"
+            app:destination="@id/createEventTemporalZone" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEventTemporalZone"
+        android:name="com.example.tesis.CreateEventTemporalZone"
+        android:label="Crear evento en zona temporal"
+        tools:layout="@layout/fragment_create_event_temporal_zone" />
+    <fragment
+        android:id="@+id/editMyEventZoneTemporal"
+        android:name="com.example.tesis.ui.myEvents.EditMyEventZoneTemporal"
+        android:label="Editar evento en zona temporal"
+        tools:layout="@layout/fragment_edit_my_event_zone_temporal" />
+
+    <fragment
+        android:id="@+id/allEventsFragment"
+        android:name="com.example.tesis.ui.AdminEventsManagement.AllEventsFragment"
+        android:label="Todos los eventos"
+        tools:layout="@layout/fragment_all_events">
+
+        <action
+            android:id="@+id/action_myEvents_to_myEventInfoFragment"
+            app:destination="@id/myEventInfoFragment" />
+    </fragment>
+</navigation>

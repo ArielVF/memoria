@@ -1,0 +1,101 @@
+<resources>
+    //Mapbox
+    <string name="app_name">U-Events</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYXJpZWx2ZiIsImEiOiJja2s0Nmc2YjAxaHZlMnZ0MTNlcDJzeXpqIn0.uB3QDE8qluJ2x-N7ZYwuaw</string>
+    <string name="user_location_permission_explanation">Esta aplicación necesita los permisos de ubicación para funcionar correctamente.</string>
+    <string name="user_location_permission_not_granted">No ha brindado permisos de ubicación.</string>
+    <string name="botonMapa">ir al Mapa</string>
+    <string name="Login">Login</string>
+    <string name="navegation">Iniciar Navegación</string>
+
+    //Login
+    <string name="forgot">¿Olvidaste tu contraseña?</string>
+    <string name="haveAccount">¿No tienes una cuenta?</string>
+    <string name="register">REGISTRATE</string>
+    <string name="iniciarSesion">Iniciar Sesión</string>
+    <string name="password">Contraseña</string>
+    <string name="user">Correo</string>
+    <string name="description">.</string>
+
+    //WrapMenu
+    <string name="title_activity_auth">authActivity</string>
+    <string name="navigation_drawer_open">Abrir navegador</string>
+    <string name="navigation_drawer_close">Cerrar Navegadorr</string>
+    <string name="nav_header_title">Test</string>
+    <string name="nav_header_subtitle">test_test@gmail.com</string>
+    <string name="nav_header_desc">Menú</string>
+    <string name="action_settings">Configuración</string>
+
+    //wrapMenu
+    <string name="menu_home">Mapa</string>
+    <string name="menu_gallery">Eventos</string>
+    <string name="menu_slideshow">Perfil</string>
+
+    //Registro
+    <string name="registro">Registro</string>
+    <string name="registrar">Registrar</string>
+
+    //Recuperar_contraseña
+    <string name="recuperar">Recuperar Contraseña</string>
+    <string name="enviar_correo">Enviar Correo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="error_aplication">Estimado usuario, se ha detectado que la opción “fecha y hora automática” de su dispositivo se encuentra desactivada.\n
+Esta aplicación requiere que dicha opción se encuentre habilitada para poder continuar.\n
+Para activar esta funcionalidad debe dirigirse a la configuración de su dispositivo, en la sección hora y fecha verá un switch con la opción “hora y fecha automática”, debe activarlo.\n
+Realizada la petición anterior, cierre la aplicación completamente y vuelva a iniciar U-Events.\n
+Agradecemos su compresión y nos disculpamos por las molestias.</string>
+
+    <string name="error_internet">Estimado usuario, se ha detectado que su dispositivo se encuentra sin conexión a internet, con la finalidad de prevenir problemas en la aplicación
+        por este suceso verá esta ventana hasta que se recupere la conexión.\n Lamentamos las molestias que esto pueda generar.</string>
+
+    <string name="info_newsubzone">Ingrese en el único campo el nombre de la subzona que desea agregar. Debe tener en consideración los siguientes detalles antes de continuar:\n
+    1.- No pueden existir dos subzonas con el mismo nombre.\n
+    2.- Para respetar un orden alfábetico en la vista de todas las subzonas, ingrese la primera letra del nombre de la nueva subzona en mayúsculas. EJ: Sala 1\n
+    3.- Las subzonas creadas no son vínculadas a ninguna zona, usted debe hacer ese proceso dirigiéndose a la sección Zona, pulse el botón editar que corresponda a la zona que desea agregar
+        la nueva subzona y luego, pulse el botón agregar subzona. Siga las instrucciones que aparecen allí para continuar.</string>
+
+    <string name="delete_subzone_info">Con la siguiente acción usted eliminará esta subzona, en consecuencia, también se borrarán los vínculos con las zonas que alamcenan este elemento.\n
+        ¿Está seguro de continuar?</string>
+
+    <string name="info_subzonetozone">Para agregar una subzona a una zona especifica debe asegurarse de que la subzona esté registrada en la sección "SubZona", posteriormente, siga estos pasos:\n
+    1.- Ingrese el nombre de la subzona en el único campo visible en esta vista.\n2.- Respete mayúsculas y minúsculas, es decir, si la subzona se llama Sala 22, escribir sala 22 no es una entrada válida.\n
+    3.- Pulse el botón agregar para asociar la subzona a la zona en el piso seleccionado.</string>
+
+    <string name="info_subzonetozone_delete">Para eliminar una subzona específica debe indicar el nombre en la única entrada de texto visible en esta vista.\nLa subzona ingresada debe aparecer
+    en la tabla que muestra el contenido de las subzonas en el piso seleccionado, debe mantener el mismo formato (mayúsculas y minúsculas) para ser considerada una entrada válida.</string>
+
+    <string name="delete_zone_message">Estimado administrador, está a punto de borrar una Zona.\n
+    Si elige continuar toda la información relacionada con este sector será borrada para todos los usuarios.\n¿Desea continuar?</string>
+
+    <string name="delete_floor_in_zone">Estimado usuario, al disminuir la cantidad de pisos en un edificio, las subzonas que existían ahí serán eliminadas.\n¿Desea continuar?</string>
+    <string name="title_activity_full_a_r">FullARActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string name="how_to_search">Para realizar una búsqueda ingrese el nombre de la zona que desea buscar. Si trabaja la aplicación en versión vertical, el campo
+    Buscar le ofrecerá opciones de autocompletado de acuerdo al sector que busque, en la versión horizontal usted deberá escribir el nombre correcto.\n
+    Si usted desconoce los sectores o sus nombres especificos le recomendamos pulsar Ver más para visualizar el nombre de los sectores que componen la aplicación.\n
+    Las subzonas (salas, baños u oficinas de un edificio) también están disponibles en el buscador, pero para ello le recomendamos usar palabras claves para que en
+    la versión vertical de la aplicación se le ofrescan coincidencias. Por ejemplo, si busca la Sala 22, al escribir 22 el buscador le sugerirá las subzonas que coinciden
+    con ese valor.</string>
+
+    <string name="permission_denegate">Estimado usuario: \n
+        Para utilizar la aplicación U-Events debe brindar los permisos solicitados.\n
+        Reinicie la aplicación y acepte los permisos requeridos.\n
+        Si seleccionó en alguno de los permisos la opción de "no mostrar otra vez este mensaje", sugerimos dirigirse a configuraciones de su dispositivo y
+        habilitar los permisos manualmente, caso contrario, desinstale la aplciación
+        y vuelva a instalarla.\n
+        Agradecemos su comprensión.</string>
+
+    <string name="version_no_compatible">Estimado usuario:\n
+        Su versión de Android no es compatible con los servicios utilizado en esta aplicación. Actualice su sistema operativo o
+    pruebe en otro dispositivo que cuente con una versión de Android Jelly Bean o mayor.</string>
+
+    <string name="gps_off">Se ha detectado que su GPS está apagado.\nU-Events requiere de su ubicación para trabajar correctamente. Para continuar reactive la funcionalidad solicitada y pulse aceptar.</string>
+
+</resources>
