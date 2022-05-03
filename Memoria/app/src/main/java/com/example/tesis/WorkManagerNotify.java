@@ -53,7 +53,7 @@ public class WorkManagerNotify extends Worker {
         JSONObject json = new JSONObject();
 
         try{
-            String token = "c2VQFsECSiStGA_OMwMDjO:APA91bGD2R9yoqkZqwZPbrJ-LUxu5DnhdYVOoqJmL6Emle3dPv6ffxHGaOo6GbZykvmTvRGxFeJ80djpYXV01xyr15XbzgCnLDjFDxJW632mRRnv35e9fNg-vcLE7o-Y4sy37J3xpqtK";
+            String token = "your_secret_token";
             json.put("to", token);
             JSONObject notification = new JSONObject();
             notification.put("titulo", title);
@@ -65,7 +65,7 @@ public class WorkManagerNotify extends Worker {
                 public Map<String, String> getHeaders() {
                     Map<String, String> header = new HashMap<>();
                     header.put("content-type", "application/json");
-                    header.put("authorization", "key=AAAAWMf6eP0:APA91bGc3ATeF5sII-UnJZSzG9GB14u33eagN_jnvSPKiOHcGlSeS5jwYtkhV5toj2z9BP7EWiBVF0jO6wEj-jsa0trB2xcPasmlagiVzZxL3FeICUmzAFuKa_H7eV5KkdOislr7mpbR");
+                    header.put("authorization", "your_key");
                     return header;
                 }
             };
