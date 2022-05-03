@@ -80,7 +80,7 @@ public class FullArActivity extends AppCompatActivity {
         this.backHome = this.findViewById(R.id.back_home);
         architectView = (ArchitectView) this.findViewById(R.id.architectView);
         final ArchitectStartupConfiguration config = new ArchitectStartupConfiguration();
-        config.setLicenseKey("rsBv+8AkzEcMJ+h3l34E3bsMgJiixzpkZzK5EkZoK4fQ8Nx+MuOaYIIRxKUlFXJUcbGM2vKQ3LuMPdeAjHo/fVCUQ8O1m8RwpLFyrXWvdksHcsEDwHcEdoZ2Tet0FefBPOldqvTSKfJoNn2ufV4Ehko/7rKbSNtEmDXch3u0YSxTYWx0ZWRfXwiufaefxL9uqff7WZGE/03pl0ykHB+8YOePRn5CBFAvOdeViVM4gm+4eiRFv9TverBfQkKo8COryWEiHYLa1J44iY+DbSZICwMe2ksSHT0LKLdujUNgaHtcZd4IDOYeUiRpEcV4f96EKmLyuCBU+2PFkX2cCtRwirhO0iXzSH23UfEIm/VFSdFrT0OKd60CdMfqCSqvoMkpZ7gjVDmZv13b1UDenT75dBJgJZGcGsTRNx9k6RwZTV5b2FsdvHxP2T9eo8EeTvZ6a83tB12P74/TnDqe+8xUi52IUN1bE1nIRzDldDwPoOeswdaOL+xM9c2TXrLC0WkREiHiC6MNIaH+7ePgBjX4LtbNY8aq1NMLRMCs69yfcbKE8hlqcvwJvO++coMWl8/Ra5+7h3KkQd7j1AtYyQO4lXGPPdT73JuFO4ncS7Nwz2CLnewkz04hxH56saHg6EJRK188Gaz78FQxBkLAQXbr6s8KmEaOpxe+qOdw6eI3lXQYlIYRyIjj0f8PYyjJluNcJf76q8R3ArczKuMPn6bUQn1kwxiU+ieInLxUOdf3uavkHxgHxqzyCF97XsT3mG9Icdv6FxnnFTa4D0VNaegZRYDJXqySfrof4qW44eYJVLMfcIU0WSNlu21yIiGZ5npUzMsKddOfkXzbsEhyILGPW1j3EF1yTG68hmTaR5H/o9I=");
+        config.setLicenseKey("your_license");
         config.setCameraResolution(CameraSettings.CameraResolution.AUTO);
         config.setCameraPosition(CameraSettings.CameraPosition.BACK);
         try {
